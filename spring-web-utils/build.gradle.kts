@@ -56,4 +56,11 @@ publishing {
             from(components["java"])
         }
     }
+
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/haerong22/spring-web-utils")
+        }
+    }
 }
