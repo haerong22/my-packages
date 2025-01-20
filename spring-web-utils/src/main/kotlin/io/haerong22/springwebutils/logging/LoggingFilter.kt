@@ -34,7 +34,6 @@ class LoggingFilter(
         val requestId = UUID.randomUUID().toString().replace("-", "")
         MDC.put("requestId", requestId)
         request.setAttribute("requested_at", System.currentTimeMillis())
-        request.inputStream.readBytes()
     }
 
     override fun afterRequest(request: HttpServletRequest, message: String) {
